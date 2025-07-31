@@ -21,36 +21,54 @@ This Chrome Extension adds a **“📄 Download PDF”** button directly into th
 1. **Clone or download this repository**:
 
    ```bash
-   git clone https://github.com/bibhukiju/chatgpt-to-pdf.git
+   git clone https://github.com/yourusername/chatgpt-to-pdf.git
+   ```
 
-2. **Open Chrome Extensions** :
+2. **Open Chrome Extensions**:
+   Navigate to `chrome://extensions/` in your Chrome browser.
 
-    Navigate to chrome://extensions/ in your Chrome browser.
-
-3. **Enable Developer Mode (top right corner)**
+3. **Enable Developer Mode** (top right corner)
 
 4. **Load the Extension**:
-Click Load Unpacked and select the chatgpt-to-pdf/ folder.
+   Click `Load Unpacked` and select the `chatgpt-to-pdf/` folder.
 
-Use the Extension:
+5. **Use the Extension**:
+   - Go to [https://chat.openai.com](https://chat.openai.com)
+   - Wait for the 📄 **Download PDF** button to appear on the top right
+   - Click it to save your current conversation as a PDF!
 
-Go to https://chatgpt.com
+---
 
-Wait for the 📄 Download PDF button to appear on the top right
+## 📁 Folder Structure
 
-Click it to save your current conversation as a PDF!
-
-## Folder Structure
+```
 chatgpt-to-pdf/
 ├── manifest.json             # Chrome extension config (MV3)
 ├── content.js                # Injects the button & handles PDF logic
 └── lib/
     └── jspdf.umd.min.js      # jsPDF library for client-side PDF generation
+```
 
+---
 
 ## 🛠 Technologies Used
-jsPDF
 
-Chrome Extensions (Manifest V3)
+- [jsPDF](https://github.com/parallax/jsPDF)
+- Chrome Extensions (Manifest V3)
+- JavaScript (content script only, no background or popup needed)
 
-JavaScript (content script only, no background or popup needed)
+---
+
+## 📄 License
+
+MIT License
+
+---
+
+## 💡 Contributing
+
+Pull requests and improvements are welcome! If you encounter any issues or have suggestions, feel free to open an issue or contribute directly.
+
+---
+
+Made with ❤️ to make your ChatGPT experience smoother.
