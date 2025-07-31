@@ -1,0 +1,10 @@
+*{
+    margin:  0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box{
+    padding: 10px 20px;
+    width: 300px;
+}
