@@ -33,13 +33,12 @@ This Chrome Extension adds a **“📄 Download PDF”** button directly into th
    Click `Load Unpacked` and select the `chatgpt-to-pdf/` folder.
 
 5. **Use the Extension**:
-   - Go to [https://chat.openai.com](https://chat.openai.com)
+   - Go to [https://chatgpt.com](https://chatgpt.com)
    - Wait for the 📄 **Download PDF** button to appear on the top right
    - Click it to save your current conversation as a PDF!
 
 ---
 
-## 📁 Folder Structure
 ## 📁 Folder Structure
 ```
 
