@@ -40,16 +40,28 @@ This Chrome Extension adds a **“📄 Download PDF”** button directly into th
 ---
 
 ## 📁 Folder Structure
-
-```
-chatgpt-to-pdf/
-├── manifest.json             # Chrome extension config (MV3)
-├── content.js                # Injects the button & handles PDF logic
-└── lib/
-    └── jspdf.umd.min.js      # jsPDF library for client-side PDF generation
+## 📁 Folder Structure
 ```
 
----
+project/
+│
+├── manifest.json             # Main config file for your Chrome extension
+├── popup.html                # Optional popup UI (e.g. from extension icon)
+│
+├── images/                   # Folder for icons, logos, etc.
+│   └── icon.png              # Example image file
+│
+├── pages/                    # Standalone extension pages (like pdf.html)
+│   └── pdf.html              # Page to display saved chat HTML
+│
+├── scripts/                  # JavaScript files
+│   ├── background.js         # Handles background tasks, listeners, etc.
+│   ├── content.js            # Injected into web pages (if used)
+│   └── popup.js              # Handles popup.html logic (optional)
+│
+├── styles/                   # CSS files
+│   └── style.css             # Shared or page-specific styles
+```
 
 ## 🛠 Technologies Used
 

@@ -4,12 +4,26 @@ function addDownloadButton() {
   const button = document.createElement("button");
   button.textContent = "📄 Download PDF";
   button.id = "chatgpt-download-btn";
-  button.classList.add("downloadBtn")
+  button.classList.add("downloadBtn");
+
   button.onclick = () => {
     const conversation = document.querySelector("main");
     if (!conversation) return alert("Conversation not found.");
 
+    // Clone the conversation
     const cloned = conversation.cloneNode(true);
+
+    // Add custom classes to all elements with class "user-message-bubble-color"
+    const userMessages = cloned.querySelectorAll(".user-message-bubble-color");
+    userMessages.forEach((el) => {
+      el.classList.add("bg-green-200", "bg-opacity-10", "justify-start");
+    });
+
+    const header = cloned.querySelector("header");
+    if (header) header.remove();
+    const footer = cloned.querySelector("thread-bottom-container");
+    if (footer) footer.remove();
+    // Prepare the HTML with custom styling
     const html = `
       <html>
       <head>
@@ -22,6 +36,7 @@ function addDownloadButton() {
       <body>${cloned.innerHTML}</body>
       </html>
     `;
+
     chrome.runtime.sendMessage({ type: "CHAT_CONTENT", payload: html });
   };
 
